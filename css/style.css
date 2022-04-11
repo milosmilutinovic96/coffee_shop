@@ -27,7 +27,9 @@ header a:visited {
     color: white;
 }
 
-
+#menu-icon {
+    width: 32px;
+}
 
 
 
@@ -98,7 +100,26 @@ header a:visited {
     background-size: cover;
     background-position: left;
     height: 640px;
+    position: relative;
 }
+
+@media (max-width: 768px) {
+    #about-bg-2::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #080707bd;
+    }
+}
+
+#fresh-beans-text-container {
+    z-index: 1;
+}
+
+
 
 /**********************************MENU SECTION*************************************************/
 
