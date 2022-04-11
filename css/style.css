@@ -76,6 +76,13 @@ header a:visited {
     width: 64px;
 }
 
+@media (max-width: 576px) {
+    #arrow-down {
+        width: 32px;
+        bottom: 16px;
+    }
+}
+
 /**********************************INTRO SECTION*************************************************/
 
 
