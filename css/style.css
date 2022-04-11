@@ -1,0 +1,134 @@
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+/**********************************HEADER*************************************************/
+
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#header-logo {
+    height: 24px;
+}
+
+header a {
+    color: white;
+    margin-left: 24px;
+}
+
+header a:hover {
+    color: white;
+}
+header a:visited {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/****************************HERO SECTION*************************************************/
+
+#hero-section {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #4133329c;
+    height: 100vh;
+}
+
+#logo-container {
+    z-index: 1;
+}
+
+#hero-logo {
+    width: 256px;
+}
+
+#arrow-down {
+    position: absolute;
+    bottom: 64px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: block;
+    width: 64px;
+}
+
+/**********************************INTRO SECTION*************************************************/
+
+
+#intro-section {
+    background-color: #eae7de;
+}
+
+/**********************************ABOUT SECTION*************************************************/
+
+
+#about-bg-1 {
+    background-image: url(../img/great-place.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    min-height: 480px;
+}
+
+#about-bg-2 {
+    background-image: url(../img/fresh-beans.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    height: 640px;
+}
+
+/**********************************MENU SECTION*************************************************/
+
+#menu-section {
+    background-color: #eae7de;
+}
+
+/**********************************CONTACT SECTION*************************************************/
+
+#contact-info-bg-1 {
+    background: linear-gradient(to right, #36313782, #36313782), url(../img/contact-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+#contact-info-bg-2 {
+    background-color: #312423a8;
+}
+
+/**********************************MAP SECTION*************************************************/
+
+
+/**********************************FOOTER SECTION*************************************************/
+
+
+footer {
+    background-color: #312423;
+}
+
+footer a img {
+    width: 32px;
+}
