@@ -160,3 +160,32 @@ footer {
 footer a img {
     width: 32px;
 }
+
+/**********************************MOBILE MENU*************************************************/
+
+
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #312423ed;
+    z-index: 2;
+    display: none;
+}
+
+#mobile-menu a {
+    color: white;
+}
+
+#mobile-menu a:hover {
+    color: rgb(175, 171, 171);
+}
+
+#close-btn {
+    position: absolute;
+    top: 12px;
+    right: 30px;
+    width: 36px;
+}
