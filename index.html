@@ -251,44 +251,63 @@
         </div>
     </footer>
 
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    
     <script>
         window.addEventListener('load', function () {
-            let menuBtn = document.getElementById("menu-btn");
+            // let menuBtn = document.getElementById("menu-btn");
+            // let closeBtn = document.getElementById("close-btn");
+            
+            // menuBtn.addEventListener("click", function () {
+                //     mobileMenu.style.display = "block";
+                // });
+                
+                // closeBtn.addEventListener("click", function () {
+                    //     mobileMenu.style.display = "none";
+                    // });
+                    
             let mobileMenu = document.getElementById("mobile-menu");
-            let closeBtn = document.getElementById("close-btn");
-
-            menuBtn.addEventListener("click", function () {
-                mobileMenu.style.display = "block";
-            });
-
-            closeBtn.addEventListener("click", function () {
-                mobileMenu.style.display = "none";
-            });
-
             let mobileMenuItems = document.getElementsByClassName("mobile-menu-item");
             for (item of mobileMenuItems) {
                 item.addEventListener("click", function () {
                     mobileMenu.style.display = 'none';
                 });
             }
+            $("#menu-btn, #close-btn").click(function() {
+                $("#mobile-menu").toggle();
+            })
+
 
             //for header
-            let heroSection = document.getElementById("hero-section");
-            let heroSectionHeight = heroSection.offsetHeight;
-            let header = document.getElementById('header');
+            // let heroSection = document.getElementById("hero-section");
+            // let heroSectionHeight = heroSection.offsetHeight;
+            // let header = document.getElementById('header');
 
-            document.addEventListener("scroll", function() {
-                if(document.documentElement.scrollTop > heroSectionHeight) {
-                    if(!header.classList.contains('solid-header')){
-                        header.classList.add('solid-header');
+            // document.addEventListener("scroll", function() {
+            //     if(document.documentElement.scrollTop > heroSectionHeight) {
+            //         if(!header.classList.contains('solid-header')){
+            //             header.classList.add('solid-header');
+            //         }
+            //     } else {
+            //         if(header.classList.contains('solid-header')) {
+            //             header.classList.remove('solid-header');
+            //         }
+            //     }
+            // });
+
+            $(document).scroll(function() {
+                let header = $("#header");
+                if($(this).scrollTop() > $("#hero-section").height()) {
+                    if(!header.hasClass("solid-header")) {
+                        header.addClass("solid-header");
                     }
                 } else {
-                    if(header.classList.contains('solid-header')) {
-                        header.classList.remove('solid-header');
+                    if(header.hasClass("solid-header")) {
+                        header.removeClass("solid-header");
                     }
                 }
             });
