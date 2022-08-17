@@ -1,0 +1,208 @@
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+/*************************************** HEADER ****************************************/
+
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1; 
+}
+
+#header-logo {
+    height: 24px;
+}
+
+header a, 
+header a:hover, 
+header a:visited {
+    color: white;
+}
+
+header a {
+    margin-left: 24px;
+}
+
+#menu-btn i {
+    font-size: 30px;
+}
+
+
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #312423ed;
+    z-index: 2;
+    display: none;
+}
+
+#mobile-menu a {
+    color: white;
+}
+
+#mobile-menu a:hover {
+    color: rgb(175, 171, 171);
+}
+
+#close-btn {
+    position: absolute;
+    right: 28px;
+    top: 14px;
+    width: 32px;
+}
+
+.solid-header {
+    position: fixed;
+    background-color: #c69572;
+
+    transition: background-color 0.4s ease;
+}
+
+
+
+/*************************************** HERO SECTION ****************************************/
+
+#hero-section {
+    background-image: url(img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #4133329c;
+    height: 100vh;
+}
+
+#hero-logo-container {
+    z-index: 1;
+}
+
+#hero-logo {
+    width: 256px;
+
+}
+
+#arrow-down {
+    position: absolute;
+    width: 64px;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    color: white;
+}
+
+
+/*************************************** INTRO SECTION ****************************************/
+
+#intro-section {
+    background: #eae7de;
+}
+
+.intro-icon {
+    width: 96px;
+}
+
+.intro-icon:hover {
+    transform: scale(1.1);
+}
+
+
+/*************************************** ABOUT SECTION ****************************************/
+
+
+#about-bg-1 {
+    background-image: url(img/great-place.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    min-height: 480px;
+}
+
+#about-bg-2 {
+    background-image: url(img/fresh-beans.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    min-height: 640px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    #about-bg-2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #080707bd;
+    }
+
+    #about-bg-2 div {
+        z-index: 1;
+    }
+}
+
+
+
+/*************************************** MENU SECTION ****************************************/
+
+
+#menu-section {
+    background: #eae7de;
+}
+
+/*************************************** CONTACT SECTION ****************************************/
+
+#contact-info-bg-1 {
+    background: linear-gradient(to right, #36313782, #36313782), url(img/contact-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+#contact-info-bg-2 {
+    background-color: #312423a8;
+}
+
+/*************************************** MAP SECTION ****************************************/
+
+#map {
+    height: 480px;
+}
+
+/*************************************** FOOTER SECTION ****************************************/
+
+
+footer {
+    background: #312423;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a i {
+    font-size: 32px;
+    margin: 0 8px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+}
